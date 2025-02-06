@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>[CLASS] Forum</h1>
+    </header>
+
+    <main>
+        <h2 id="create-thread-header">Create a New Thread</h2>
+        <form id="thread-form">
+            <input type="text" id="thread-title" placeholder="Thread Title" required>
+            <textarea id="thread-content" placeholder="Thread Content" required></textarea>
+            <button type="submit">Post Thread</button>
+        </form>
+
+        <h2 id="threads-header">Threads</h2>
+        <div id="thread-list"></div>
+
+        <div id="thread-details" style="display:none;">
+            <h2 id="thread-title-display"></h2>
+            <p id="thread-content-display"></p>
+
+            <h3>Comments</h3>
+            <div id="comment-list"></div>
+
+            <h3>Add a Comment</h3>
+            <form id="comment-form">
+                <textarea id="comment-content" placeholder="Write a comment..." required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+
+            <button onclick="closeThread()">Back to Threads</button>
+        </div>
+        <button id="toggle-user-list" onclick="toggleUserList()" style="position: fixed; right: 20px;top: 20px; width: 75; height: 80;background-color: transparent;"><img src="https://i.ibb.co/dv1Mnws/images-removebg-preview.png" alt="images-removebg-preview" border="0" width="77" height="77" ></button>
+<div id="user-list" style="position: fixed; right: 20px; top: 120px; width: 275px; background-color: #f0f0f0; border-left: 1px solid #ccc; padding: 10px; display: none;">
+    <h3>User List</h3>
+    <ul id="users"></ul>
+</div>
+
+
+    </main>
+
+    <script src="{{ url_for('static\js', filename='forum.js') }}"></script>
+</body>
+</html>
