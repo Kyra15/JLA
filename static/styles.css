@@ -20,7 +20,6 @@ body {
   height: 100%;
 }
 
-
 div.content {
   margin-left: 20%;
   height: 100%;
@@ -150,14 +149,6 @@ hr.black-border {
 }
 
 
-.type-filter {
-  display: flex;
-  gap: 10px;
-  margin-top: 5px;
-  width: 85%;
-  flex-wrap: wrap;
-}
-
 .warning {
   background-color: #e0bbb8;
   border-radius: 5px;
@@ -165,29 +156,6 @@ hr.black-border {
   padding: 5px;
   display: none;
 }
-
-
-.item-box {
-  background-color: #fff;
-  color: #000;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 14px;
-  border: 2px solid black;
-  display: none;
-}
-
-.item-box img {
-  height: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.show-item {
-  display: block;
-}
-
 
 .login input {
   padding: 10px;
@@ -215,4 +183,94 @@ hr.black-border {
 
 .clickable {
     cursor: pointer;
+}
+
+.container {
+    background: white;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+}
+
+.profile img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    object-fit: cover;
+    left: 50%;
+    transform: translateX(15%);
+}
+
+.schedule {
+    flex: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.period {
+    padding: 10px;
+    margin: 5px 0;
+    width: 60%;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5vw;
+}
+
+.period:nth-child(2) { background: #f7f4d4; }
+.period:nth-child(3) { background: #6fdfd1; }
+.period:nth-child(4) { background: #f7f4d4; }
+.period:nth-child(5) { background: #6fdfd1; }
+.period:nth-child(6) { background: #f7f4d4; }
+.period:nth-child(7) { background: #6fdfd1; }
+.period:nth-child(8) { background: #f7f4d4; }
+
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #01afda;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 32px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #ffff;
+  display: block;
+}
+
+.sidenav h1 {
+padding: 6px 8px 6px 32px;
+text-decoration: none;
+font-size: 64px;
+color: #ffff;
+}
+
+.sidenav a:hover {
+  color: #818181;
 }

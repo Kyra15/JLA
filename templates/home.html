@@ -3,74 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            display: flex;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-        .profile {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .schedule {
-            flex: 2;
-            text-align: center;
-        }
-        h2 {
-            margin-bottom: 15px;
-        }
-        .period {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            color: black;
-        }
-        .period:nth-child(2) { background: #f7f4d4; }
-        .period:nth-child(3) { background: #6fdfd1; }
-        .period:nth-child(4) { background: #f7f4d4; }
-        .period:nth-child(5) { background: #6fdfd1; }
-        .period:nth-child(6) { background: #f7f4d4; }
-        .period:nth-child(7) { background: #6fdfd1; }
-        .period:nth-child(8) { background: #f7f4d4; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+
+    <title>Home | Schedule</title>
 </head>
 <body>
-    <div class="container">
-        <div class="profile">
-            <img src="static/images/profile.webp" alt="Profile Photo">
-        </div>
-        <div class="schedule">
-            <h2>Alan Jith's Schedule</h2>
-            <div class="period">Spanish 4, Mrs. Castro<br>Period 1<br>Period 1</div>
-            <div class="period">AP Calc AB, Dr. Pena-Lopez<br>Period 2<br>Period 2</div>
-            <div class="period">AP US History, Mrs. Simard<br>Period 3<br>Period 3</div>
-            <div class="period">English 3 Honors, Ms. Cedeno<br>Period 4<br>Period 4</div>
-            <div class="period">Band 3, Mrs. Inghram<br>Period 5<br>Period 5</div>
-            <div class="period">AP Computer Science A, Mrs. Demosthenes<br>Period 6<br>Period 6</div>
-            <div class="period">Physics 1, Ms. Macnamara<br>Period 7<br>Period 7</div>
+
+    <div class="sidenav">
+        <div class="links">
+            <h1>Alan Jith</h1>
+            <a href="#" class="link">Home</a>
+            <a href="login" class="link">Sign out</a>
         </div>
     </div>
+
+    <div class="container content">
+        <div class="schedule">
+            <h1>Alan Jith's Schedule</h1>
+            <div class="period clickable" data-url="period1.html"><br>Spanish 4, Mrs. Castro<br>Period 1<br><br></div>
+            <div class="period clickable" data-url="period2.html"><br>AP Calc AB, Dr. Pena-Lopez<br>Period 2<br><br></div>
+            <div class="period clickable" data-url="period3.html"><br>AP US History, Mrs. Simard<br>Period 3<br><br></div>
+            <div class="period clickable" data-url="period4.html"><br>English 3 Honors, Ms. Cedeno<br>Period 4<br><br></div>
+            <div class="period clickable" data-url="period5.html"><br>Band 3, Mrs. Imbersin<br>Period 5<br><br></div>
+            <div class="period clickable" data-url="period6.html"><br>AP Computer Science A, Mrs. Demosthenes<br>Period 6<br><br></div>
+            <div class="period clickable" data-url="period7.html"><br>Physics 1, Ms. Macnamara<br>Period 7<br><br></div>
+        </div>
+    </div>
+<script src="static/js/script.js"></script>
+<script src="static/js/home.js"></script>
 </body>
 </html>
