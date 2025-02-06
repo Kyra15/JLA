@@ -21,7 +21,7 @@ async function validateForm() {
     if (user_data && user_data.password === password) {
         current_user = user_data;
         localStorage.setItem('current_user', JSON.stringify(current_user));
-        changePage('inventory');
+        changePage('home');
         return true;
     } else {
         window.alert("Invalid username or password");
@@ -40,7 +40,6 @@ async function fetchFromDB(username) {
         }
         const data = await response.json();
 
-        // have to get only one object based on id
         const user_data = data.find((user) => user.username == username);
 
         if (user_data) {
